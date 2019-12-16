@@ -1,0 +1,41 @@
+<meta charset ="UTF-8">
+<script>
+//Faça um programa que receba a idade de oito pessoas, calcule e mostre:
+//a) a quantidade de pessoas em cada faixa etária;
+//b) a porcentagem de pessoas na primeira faixa etária com relação ao total de pessoas.
+//c) a porcentagem de pessoas na última faixa etária com relação ao total de pessoas
+
+var f1 = 0; // até 15 anos
+var f2 = 0; // 16 a 30 anos
+var f3 = 0; // 31 a 45 anos
+var f4 = 0; // 46 a 60 anos
+var f5 = 0; // acima de 60 anos
+
+for (i = 1; i <= 8 ; i++) {
+    var idade = parseInt(prompt(i + ") "+ " Digite uma idade"));
+	if(idade <= 15){
+		f1++;
+	}
+	if(idade >= 16 && idade <= 30){
+		f2++;
+	}
+	if(idade >= 31 && idade <=45){
+		f3++;
+	}
+	if(idade >= 46 && idade<= 60 ){
+		f4++;
+	}
+	if(idade > 60){
+		f5++;
+	}
+}
+document.write("1ª FAIXA ETÁRIA : " + f1 + "<br>");
+document.write("2ª FAIXA ETÁRIA: " + f2 + "<br>");
+document.write("3ª FAIXA ETÁRIA: " + f3 +"<br>");
+document.write("4ª FAIXA ETÁRIA: " + f4 +"<br>");
+document.write("5ª FAIXA ETÁRIA: " + f5 + "<br>");
+document.write("A porcentagem da primeira faixa etária com relação ao total de pessoas é: " + ((f1*100)/8) +"%" + "<br>");
+document.write("A porcentagem da ultima faixa etária com relação ao total de pessoas é: " + ((f5*100)/8) +"%");
+</script>
+
+

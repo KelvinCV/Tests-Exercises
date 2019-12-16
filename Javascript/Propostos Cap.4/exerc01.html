@@ -1,0 +1,19 @@
+<meta charset = "UTF-8">
+<script>
+// Faça um programa que receba quatro notas de um aluno, calcule e mostre a média aritmética das notas e a mensagem de aprovado ou reprovado,
+// considerando para aprovação média 7.
+var n1 = parseFloat(prompt("Digite a n1"));
+var n2 = parseFloat(prompt("Digite a n2"));
+var n3 = parseFloat(prompt("Digite a n3"));
+var n4 = parseFloat(prompt("Digite a n4"));
+var media = (n1+n2+n3+n4)/4;
+document.write("Média: " + media + "<br>");
+
+if (media >= 7) {
+    document.write("Aluno aprovado");
+}
+if (media < 7) {
+    document.write("Aluno reprovado");
+}
+
+</script>

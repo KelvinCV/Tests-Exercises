@@ -1,0 +1,21 @@
+<meta charset = "UTF-8">
+<script>
+//Faça um programa que receba o ano de nascimento de uma pessoa e o ano atual, calcule e mostre:
+//a) a idade dessa pessoa em anos;
+//b) a idade dessa pessoa em meses;
+//c) a idade dessa pessoa em dias;
+//d) a idade dessa pessoa em semanas.
+
+var anoNasc = parseInt(prompt("Digite o ano de nascimento"));
+var anoAtual = parseInt(prompt("Digite o ano atual"));
+var anos = anoAtual - anoNasc;
+var meses = anos * 12;
+var dias = anos * 365;
+var semanas =  anos * 52;
+
+document.write(anos + " anos" + "<br>" );
+document.write(meses + " meses" + "<br>");
+document.write(dias + " dias" + "<br>");
+document.write(semanas + " semanas");
+
+</script>

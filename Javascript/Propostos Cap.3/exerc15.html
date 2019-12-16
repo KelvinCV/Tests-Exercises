@@ -1,0 +1,14 @@
+<meta charset = "UTF-8">
+<script>
+//João recebeu seu salário e precisa pagar duas contas atrasadas. Em razão do atraso, ele deverá pagar multa de 2% sobre cada conta.
+//Faça um programa que calcule e mostre quanto restará do salário de João.
+
+var sal = parseInt(prompt("Digite o salário"));
+var conta1 = parseInt(prompt("Digite o valor da conta a se pagar"));
+var conta2 = parseInt(prompt("Digite o valor da segunda conta a se pagar"));
+var multa1 = conta1 + conta1 * 2/100;
+var multa2 = conta2 + conta2 * 2/100;
+var novoSal = sal - multa1 - multa2;
+document.write("Restará " + novoSal + " reais.")
+
+</script>

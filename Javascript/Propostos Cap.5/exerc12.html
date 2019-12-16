@@ -1,0 +1,29 @@
+<meta charset ="UTF-8">
+<script>
+//Faça um programa que receba dez números inteiros e mostre a quantidade de números primos dentre os
+//números que foram digitados.
+
+function primo(num) {
+	var tot = 0;
+	for(var i = 1; i<= num; i++) {
+		if(num % i == 0) {
+			tot++;
+		}		
+	}
+	if(tot == 2) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+var total = 0;
+for(var i = 1; i <= 10; i++) {
+	var numero = parseInt(prompt("Digite o " + i + "º número: "));
+	if(primo(numero) == true) {
+		total++;
+	}
+}
+document.write("O total de números primos é: "+ total);
+
+</script>

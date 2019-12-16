@@ -1,0 +1,57 @@
+<meta charset ="UTF-8">
+<script>
+// Faça um programa que leia cinco grupos de quatro valores (A, B, C, D) e mostre-os na ordem lida. Em seguida,
+// organize-os em ordem crescente e decrescente.
+
+var v1 = [];
+var v2 = [];
+var v3 = [];
+var v4 = [];
+var v5 = [];
+
+function cres(x1,x2) {
+	return(x1 - x2);
+}
+function decres(x1,x2) {
+	return(x2 - x1);
+}
+
+for(i = 1; i <= 5; i++) {
+	var a = parseFloat(prompt("Digite um valor A:"));
+	var b = parseFloat(prompt("Digite um valor B:"));
+	var c = parseFloat(prompt("Digite um valor C:"));
+	var d = parseFloat(prompt("Digite um valor D:"));	
+	if(i == 1) {
+		v1.push(a,b,c,d);
+		alert("Números digitados: " + v1);
+		alert("Números em ordem crescente: " + v1.sort(cres));
+		alert("Números em ordem decrescente: " + v1.sort(decres));
+	}
+	if(i == 2) {
+		v2.push(a,b,c,d);
+		alert("Números digitados: " + v2);
+		alert("Números em ordem crescente: " + v2.sort(cres));
+		alert("Números em ordem decrescente: " + v2.sort(decres));
+	}
+	if(i == 3) {
+		v3.push(a,b,c,d);
+		alert("Números digitados: " + v3);
+		alert("Números em ordem crescente: " + v3.sort(cres));
+		alert("Números em ordem decrescente: " + v3.sort(decres));
+	}	
+	if(i == 4) {
+		v4.push(a,b,c,d);
+		alert("Números digitados: " + v4);
+		alert("Números em ordem crescente: " + v4.sort(cres));
+		alert("Números em ordem decrescente: " + v4.sort(decres));
+	}
+	if(i == 5) {
+		v5.push(a,b,c,d);
+		alert("Números digitados: " + v5);
+		alert("Números em ordem crescente: " + v5.sort(cres));
+		alert("Números em ordem decrescente: " + v5.sort(decres));
+	}
+}
+document.write("Números em ordem crescente: " + "<br>" + v1.sort(cres) + "<br>" + v2.sort(cres) +"<br>" + v3.sort(cres) +"<br>" + v4.sort(cres) +"<br>" + v5.sort(cres) + "<br>");
+document.write("Números em ordem decrescente: " + "<br>" + v1.sort(decres) + "<br>" + v2.sort(decres) +"<br>" + v3.sort(decres) +"<br>" + v4.sort(decres) +"<br>" + v5.sort(decres));
+</script>

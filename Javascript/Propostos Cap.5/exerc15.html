@@ -1,0 +1,42 @@
+<meta charset ="UTF-8">
+<script>
+//Uma empresa fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um novo produto lançado.
+// Para isso, forneceu o sexo do entrevistado e sua resposta (S — sim; ou N — não). 
+//Sabe-se que foram entrevistadas dez pessoas. Faça um programa que calcule e mostre:
+//■■ o número de pessoas que responderam sim;
+//■■ o número de pessoas que responderam não;
+//■■ o número de mulheres que responderam sim; e
+//■■ a percentagem de homens que responderam não, entre todos os homens analisados.
+var sim = 0;
+var nao = 0; 
+var mulherSim = 0;
+var homem = 0;
+var homemNao = 0;
+
+for(var i = 1;i <= 10; i++) {
+	var sexo = prompt("Qual o sexo da " + i +"º pessoa? H / M");
+	var resposta = prompt("Gostou do produto? S / N");
+
+	if(resposta == "S") {
+		sim++;
+	}
+	if(resposta == "N") {
+		nao++;
+	}
+	if(sexo == "M" && resposta == "S") {
+		mulherSim++;
+	}
+	if(sexo == "H") {
+		homem++;
+		if(resposta == "N") {			
+			homemNao++;
+		}
+	}
+}
+var porcentagem = (homemNao / homem) * 100 ;
+document.write("Respostas Sim: " + sim + "<br>");
+document.write("Respostas Não: " + nao + "<br>");
+document.write("Mulheres que responderam sim: " + mulherSim + "<br>");
+document.write("A porcentagem de homens que respoderam não é : " + porcentagem + " %");
+
+</script>

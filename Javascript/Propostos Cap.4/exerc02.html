@@ -1,0 +1,21 @@
+<meta charset = "UTF-8">
+<script>
+//Faça um programa que receba duas notas, calcule e mostre a média aritmética e a mensagem que se encontra na tabela a seguir:
+var n1 = parseFloat(prompt("Digite a n1"));
+var n2 = parseFloat(prompt("Digite a n2"));
+var media = (n1+n2)/2;
+document.write("Média = " + media + "<br>");
+
+if (media >= 0 && media < 4) {
+    document.write("Reprovado" + "<br>");
+}
+
+if (media >= 4 && media < 7) {
+    document.write("Exame" + "<br>");
+}    
+
+if (media >= 7 && media <= 10) {
+    document.write("Aprovado" + "<br>");
+}
+
+</script>

@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<script>
+//Faça um programa que receba a idade, o peso, a altura, a cor dos olhos (A — azul; P — preto; V — verde; e C — castanho)
+// e a cor dos cabelos (P — preto; C — castanho; L — louro; e R — ruivo) de seis pessoas, e que calcule e mostre:
+
+//■■ a quantidade de pessoas com idade superior a 50 anos e peso inferior a 60 kg;
+//■■ a média das idades das pessoas com altura inferior a 1,50 m;
+//■■ a porcentagem de pessoas com olhos azuis entre todas as pessoas analisadas; e
+//■■ a quantidade de pessoas ruivas e que não possuem olhos azuis.
+
+
+var idadePesoSuperior = 0;
+var inferior150 = 0;
+var totalInferior150 = 0;
+var ruivaAzul = 0;
+var olhoAzul = 0;
+
+for(var i = 1; i  <= 6; i++) {
+	var idade = parseInt(prompt("Qual a idade da " +  i + "º pessoa?"));
+	var peso = parseFloat(prompt("Qual o peso da " + i + "º pessoa?"));
+	var altura = parseFloat(prompt("Qual a altura da " + i + "º pessoa?"));
+	var corDosOlhos = prompt("Qual a cor dos olhos da " + i + "º pessoa?");
+	var corDosCabelos = prompt("Qual a cor do cabelo da " + i + "º pessoa?");
+	
+	if(idade > 50 && peso < 60) {
+		idadePesoSuperior++;
+	}
+	if(altura < 1.50) {
+		inferior150++;
+		totalInferior150+=idade;
+	}
+	if(corDosCabelos == "R" && corDosOlhos != "A") {
+		ruivaAzul++;
+	}
+	if(corDosOlhos == "A") {
+		olhoAzul++;
+	}
+	
+}
+
+var media = totalInferior150/inferior150;
+var porcentagem = (olhoAzul*100)/6;
+document.write("A quantidade de pessoas superior a 50 anos e peso inferior a 60 é: " + idadePesoSuperior + "<br>");
+document.write("A média de idades de pessoas com altura inferior a 1.50 é: " + media + "<br>");
+document.write("Porcentagem olhos azuis: "+ porcentagem +"%" + "<br>");
+document.write("Pessoas ruivas dos olhos não azuis: " + ruivaAzul);
+</script>

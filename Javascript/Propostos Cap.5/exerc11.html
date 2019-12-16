@@ -1,0 +1,19 @@
+<meta charset ="UTF-8">
+<script>
+//Faça um programa que receba o valor de um carro e mostre uma tabela com os seguintes dados: preço
+//final, quantidade de parcelas e valor da parcela. Considere o seguinte:
+//■■ o preço final para compra à vista tem desconto de 20%;
+//■■ a quantidade de parcelas pode ser: 6, 12, 18, 24, 30, 36, 42, 48, 54 e 60; e
+//■■ os percentuais de acréscimo encontram-se na tabela a seguir.
+
+var preco = parseFloat(prompt("Digite o preço do carro: "));
+var aVista = preco - ((preco * 20)/100);
+document.write("O preço do carro a vista ganha 20% de desconto, totalizando em: " + aVista + " R$" + "<br>");
+var p = 3;
+
+for(i = 6 ; i <= 60 ; i +=6) {
+	document.write("Feito em "  +i + " parcelas, o preço final é : "+(preco + ((preco * p)/100))+" R$"+"<br>")
+	p++;
+}
+
+</script>

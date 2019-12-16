@@ -1,0 +1,41 @@
+<meta charset ="UTF-8">
+<script>
+//Faça um programa que receba dez idades, pesos e alturas, calcule e mostre:
+//■■ a média das idades das dez pessoas;
+//■■ a quantidade de pessoas com peso superior a 90 kg e altura inferior a 1,50 metro; e
+//■■ a porcentagem de pessoas com idade entre 10 e 30 anos entre as pessoas que medem mais de 1,90 m.
+
+var idades = 0;
+var superior = 0;
+var acima90 = 0;
+var idadeEntre = 0;
+for(var i = 1;i <= 10;i++)
+{
+	var idade = parseInt(prompt("Digite a idade da "+i+"º pessoa: "));
+	var peso = parseFloat(prompt("Digite o peso da "+i+"º pessoa: "));
+	var altura = parseFloat(prompt("Digite a altura da "+i+"º pessoa: "));
+	idades+=idade;
+	if(peso > 90 && altura < 1.50)
+	{
+		superior++;
+	}
+	if(altura > 1.90)
+	{
+		acima90++;
+		if(idade > 10 && idade<30)
+		{
+			idadeEntre++;
+		}
+		
+	}
+
+
+
+}
+var media = idades/10;
+var porcentagem =(idadeEntre/acima90)*100;
+document.write("A media das idades é: "+ media+"<br>");
+document.write("A quantidade de pessoas com o peso superior a 90 e altura inferior a 1.50 é: "+superior+"<br>");
+document.write("A porcentagem de pessoas com idade entre 10 a 30 anos entre as pessoas que medem mais de 1.90 é: "+porcentagem+"%");
+
+</script>

@@ -1,0 +1,11 @@
+<meta charset = "UTF-8">
+<script>
+// Um funcionário recebe um salário fixo mais 4% de comissão sobre as vendas. 
+// Faça um programa que receba o salário fixo do funcionário e o valor de suas vendas, calcule e mostre a comissão e seu salário final. 
+var sal = parseInt(prompt("Salário fixo"));
+var vendas = parseInt(prompt("Valor das vendas"));
+var com = vendas - vendas * 96/100;
+var salfinal = sal + com;
+document.write("Comissão: " + com + "<br>");
+document.write("Salário final: " + salfinal);
+</script>

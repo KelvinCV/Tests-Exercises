@@ -1,0 +1,32 @@
+<meta charset = "UTF-8">
+<script>
+// O preço ao consumidor de um carro novo é a soma do custo de fábrica com a porcentagem do distribuidor
+//e dos impostos, ambos aplicados ao custo de fábrica. As porcentagens encontram-se na tabela a
+//seguir. Faça um programa que receba o custo de fábrica de um carro e mostre o preço ao consumidor.
+
+var custo = parseFloat(prompt("Digite o custo de fábrica do carro"));
+var dist;
+var imp;
+var preco;
+
+if (custo <= 12000){
+    dist = custo * 5/100;
+    imp = 0
+    preco = custo + dist + imp;
+}
+
+else if (custo > 12000 && custo <= 25000){
+    dist = custo * 10/100;
+    imp = custo * 15/100;
+    preco = custo + dist + imp;
+}
+
+else if (custo > 25000){
+    dist = custo * 15/100;
+    imp = custo * 20/100;
+    preco = custo + dist + imp;
+}
+
+document.write("Preço ao consumidor = " + preco + " reais.");
+
+</script>

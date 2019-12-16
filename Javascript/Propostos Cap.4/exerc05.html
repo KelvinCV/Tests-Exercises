@@ -1,0 +1,47 @@
+<meta charset = "UTF-9">
+<script>
+// Faça um programa que receba dois números e execute as operações listadas a seguir 
+// de acordo com a escolha do usuário
+
+var escolha = prompt("Escolha a operação. Digite : 1 para média; 2 para subtração; 3 para multiplicação; 4 para divisão.");
+var n1 = parseFloat(prompt("Digite o n1"));
+var n2 = parseFloat(prompt("Digite o n2"));
+var media = (n1+n2)/2;
+var sub;
+var mult = n1*n2;
+var div = n1/n2
+
+if (escolha > 4 || escolha < 1) {
+    alert("ERRO. Operação inválida.");
+}
+
+// Média
+else if (escolha == 1) {
+    document.write(media);
+}
+// Diferença do maior pelo menor
+else if (escolha == 2) {
+    if (n1 > n2) {
+    var sub = n1 - n2;
+    document.write(sub);
+    }
+
+    else if (n2 > n1) {
+    var sub = n2 - n1;
+    document.write(sub);
+    }
+
+}
+// Multiplicação
+ else if (escolha == 3) {
+    document.write(mult);
+    }
+// Divisão
+ else if( escolha == 4) {{
+    document.write(div);
+    } 
+    if (n2 == 0) {
+       alert(" ERRO. n2 não pode ser igual a 0. ");
+   }
+ }
+</script>

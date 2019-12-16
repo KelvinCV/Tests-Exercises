@@ -1,0 +1,21 @@
+<meta charset = "UTF-8">
+<script>
+// Faça um programa para calcular e mostrar o salário reajustado de um funcionário. 
+// O percentual de aumento encontra-se na tabela a seguir.
+// salário até 300 reais ====> 35% de aumento
+// salário acime de 300 reais ===> 15% de aumento
+
+var sal = parseFloat(prompt("Digite o salário do funcionário em reais"));
+var novoSal = sal + sal * 35/100;
+var novoSal2 = sal + sal * 15/100;
+
+if (sal <= 300) {
+    document.write("Salário reajustado = " + novoSal + " reais.");
+}
+
+if (sal > 300) {
+    document.write("Salário reajustado = " + novoSal2 + " reais.");
+}
+
+
+</script>

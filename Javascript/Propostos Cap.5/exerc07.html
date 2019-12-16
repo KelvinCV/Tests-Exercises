@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+// Faça um programa que receba a idade, a altura e o peso de cinco pessoas, calcule e mostre:
+//■■ a quantidade de pessoas com idade superior a 50 anos;
+//■■ a média das alturas das pessoas com idade entre 10 e 20 anos;
+//■■ a porcentagem de pessoas com peso inferior a 40 kg entre todas as pessoas analisadas.
+
+var idade;
+var altura;
+var peso;
+
+var pessoas = 0;
+var alturasMedia = 0;
+var alturasQuant = 0;
+var menosDe40 = 0;
+
+var media = alturasMedia/alturasQuant;
+var porcent =  (menosDe40/5)/100;
+
+for (i = 0; i < 5; i++) {
+    idade = parseInt(prompt("Digite a idade da " + (i + 1) + "ª pessoa"));
+    altura = parseFloat(prompt("Digite a altura(m) da " + (i + 1) + "ª pessoa"));
+    peso = parseFloat(prompt("Digite o peso(kg) da " + (i + 1) + "ª pessoa"));
+        if (idade > 50 ) {
+            pessoas++;
+        }
+        
+        if (idade >= 10 && idade <= 20) {
+            alturasMedia += altura;
+            alturasQuant++;
+        }
+
+        if (peso < 40) {
+            menosDe40++;
+        }    
+
+}
+
+document.write("Quantidade de pessoas com mais de 50 anos: " + pessoas +"<br>");
+document.write("Média da altura das pessoas entre 10 e 20 anos : " + media + " m" + "<br>");
+document.write("Porcentagens de pessoas com menos de 40 kg: " + porcent + "%");
+
+</script>

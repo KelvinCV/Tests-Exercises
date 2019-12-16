@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<script>
+//Faça um programa que apresente o menu de opções a seguir:
+//Menu de opções:
+//1. Média aritmética
+//2. Média ponderada
+//3. Sair
+
+//Digite a opção desejada.
+//Na opção 1: receber duas notas, calcular e mostrar a média aritmética.
+//Na opção 2: receber três notas e seus respectivos pesos, calcular e mostrar a média ponderada.
+//Na opção 3: sair do programa.
+
+//Verifique a possibilidade de opção inválida. Nesse caso, o programa deverá mostrar uma mensagem.
+
+for (var i =1; ;i++) {
+	var opcao = parseInt(prompt("Menu de opções: \n 1- MEDIA ARITMÉTICA \n 2- MEDIA PONDERADA \n 3- SAIR \n Digite a opção desejada. "));
+	if (opcao == 1) {
+		var n1 = parseFloat(prompt("Digite a primeira nota: "));
+		var n2 = parseFloat(prompt("Digite a segunda nota: "));
+		var media = (n1 + n2)/2;
+		alert("a media aritmetica é : " + media);
+	}
+	if (opcao == 2) {
+		var num1 = parseFloat(prompt("Digite a primeira nota: "));
+		var p1 = parseInt(prompt("Peso da primeira nota: "));
+		var num2 = parseFloat(prompt("Digite a segunda nota: "));
+		var p2 = parseInt(prompt("Peso da segunda nota: "));
+		var num3 = parseFloat(prompt("Digite a terceira nota: "));
+		var p3 = parseInt(prompt("Peso da terceira nota: "));
+		var mediaPonderada = ((num1*p1) + (num2*p2) + (num3*p3))/(p1+p2+p3);
+		alert("A media ponderada é : " + mediaPonderada);		
+	}
+	if (opcao == 3) {
+		break;
+	}
+}
+</script>

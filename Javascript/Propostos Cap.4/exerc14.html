@@ -1,0 +1,40 @@
+<meta charset = "UTF-8">
+<script>
+//Faça um programa que receba o salário de um funcionário e, usando a tabela a seguir, calcule e mostre o novo salário.
+
+var sal = parseFloat(prompt("Digite o salário"));
+var p;
+var novoSal;
+
+if (sal <= 300) {
+    p =  sal * 50/100;
+    novoSal = sal + p;
+}
+else if (sal > 300 && sal <= 500) {
+    p = sal * 40/100;
+    novoSal = sal + p;
+}
+
+else if (sal > 500 && sal <= 700) {
+    p = sal * 30/100;
+    novoSal = sal + p;
+}
+
+else if (sal > 700 && sal <= 800) {
+    p = sal * 20/100;
+    novoSal = sal + p;
+}
+
+else if (sal > 800 && sal <= 1000) {
+    p = sal * 10/100;
+    novoSal = sal + p;
+}
+
+else if (sal > 1000) {
+    p = sal * 5/100;
+    novoSal = sal + p;
+}
+
+document.write("Novo salário: " + novoSal + " reais.");
+
+</script>

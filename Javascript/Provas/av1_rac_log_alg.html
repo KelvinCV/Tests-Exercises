@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+<script>
+// AV1 Raciocínio Lógico Algorítmico
+
+// Dados do produto
+var precoUnitario = parseInt(prompt("Qual o preço unitário do produto?"));
+var paisDeOrigem = parseInt(prompt("Qual o país de origem? 1 - Estados Unidos; 2 - México; 3 - outros"));
+var meioDeTransporte = prompt("Qual o meio de transporte?  T - terrestre; F - fluvial; A - aéreo");
+var cargaPerigosa = prompt("A carga é perigosa? S - sim; N - não");
+
+// Imposto
+var imposto;
+var valorDoImposto;
+if(precoUnitario <= 100) {
+	imposto = 5
+	valorDoImposto = (precoUnitario/100 * imposto)
+	document.write("Imposto de " +  imposto + "%." + " Valor do imposto =  " + valorDoImposto + " reais" + "<br>");
+}
+else {
+	imposto = 10
+	valorDoImposto = (precoUnitario/100 * imposto)
+	document.write("Imposto de " + imposto + "%." + " Valor do imposto =  " + valorDoImposto + " reais" + "<br>");
+}
+
+// Valor do Transporte
+var valorDoTransporte;
+ 
+if(cargaPerigosa == "s") {
+	if(paisDeOrigem == 1) {
+		valorDoTransporte = 50;
+	}
+	else if(paisDeOrigem == 2) {
+		valorDoTransporte = 21;
+	}
+	else if(paisDeOrigem == 3) {	
+		valorDoTransporte = 24;
+	}
+}
+else if(cargaPerigosa == "n") {
+	if(paisDeOrigem == 1) {
+		valorDoTransporte = 12;
+	}
+	else if(paisDeOrigem == 2) {
+		valorDoTransporte= 21;
+	}
+	else if(paisDeOrigem ==3) {
+		valorDoTransporte = 60;
+	}
+}
+
+document.write("Valor do transporte = " + valorDoTransporte + " reais" + "<br>")
+
+
+// Valor do seguro
+var valorDoSeguro;
+
+if(paisDeOrigem == 2) {
+	valorDoSeguro = precoUnitario/2;
+}
+
+if(meioDeTransporte == "a") {
+	valorDoSeguro = precoUnitario/2;
+}
+
+document.write("Valor do seguro = " + valorDoSeguro + " reais" + "<br>");
+
+//Preço final
+var precoFinal = precoUnitario + valorDoImposto + valorDoTransporte + valorDoSeguro
+
+document.write("Preço final = " + precoFinal + " reais" + "<br>");
+</script>

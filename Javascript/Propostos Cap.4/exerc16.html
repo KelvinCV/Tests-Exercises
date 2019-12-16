@@ -1,0 +1,27 @@
+<meta charset = "UTF-8">
+<script>
+// Uma empresa decide aplicar descontos nos seus preços usando a tabela a seguir. Faça um programa que
+// receba o preço atual de um produto e seu código, calcule e mostre o valor do desconto e o novo preço.
+
+var p = parseFloat(prompt("Digite o preço atual do produto"));
+var c = parseFloat(prompt("Digite o código do produto"));
+var d;
+var novoP;
+
+if (p <= 30) {
+    d = 0
+    novoP = p + d
+}
+
+if (p > 30 && p <= 100) {
+    d = p - p * 90/100;
+    novoP = p - d
+}
+
+if (p > 100) {
+    d =p - p * 85/100;
+    novoP = p - d;
+}
+
+document.write("Desconto de: " + d + " reais." + "<br>" + "Novo preço: " + novoP + " reais.");
+</script>

@@ -1,0 +1,41 @@
+<meta charset = "UTF-8">
+<script>
+//Faça um programa que receba o preço de um produto, calcule e mostre, de acordo com as tabelas a seguir,o novo preço e a classificação
+
+var p = parseFloat(prompt("Informe o preço do produto"));
+var percent;
+var novoP;
+
+
+if (p <= 50){
+    percent = p * 5/100;
+    novoP = p + percent;
+    
+}
+
+if (p > 50 && p <= 100){
+    percent = p * 10/100;
+    novoP = p + percent;
+    
+}
+
+if (p > 100){
+    percent = p * 15/100;
+    novoP = p + percent;
+}
+
+document.write("Novo preço: " + novoP + "<br>" );
+
+if(novoP <= 80){
+        document.write("Barato");
+    }
+    else if (novoP > 80 && novoP <= 120){
+        document.write("Normal");
+    }
+    else if (novoP > 120 && novoP <= 200){
+        document.write("Caro");
+    }
+    else if (novoP > 200){
+        document.write("Muito caro");
+    }
+</script>

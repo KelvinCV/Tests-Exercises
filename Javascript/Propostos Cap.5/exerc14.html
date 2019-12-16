@@ -1,0 +1,32 @@
+<meta charset ="UTF-8">
+<script>
+//Cada espectador de um cinema respondeu a um questionário no qual constava sua idade e sua opinião
+//em relação ao filme: ótimo — 3; bom — 2; regular — 1. Faça um programa que receba a idade e a opinião
+//de quinze espectadores, calcule e mostre:
+//■■ a média das idades das pessoas que responderam ótimo;
+//■■ a quantidade de pessoas que responderam regular; e
+//■■ a percentagem de pessoas que responderam bom, entre todos os espectadores analisados.
+
+var otimo = 0;
+var totOtimo = 0;
+var regular = 0;
+var bom = 0;
+
+for(var i = 1; i <= 15; i++)
+{
+	var idade = parseInt(prompt("Digite a " + i + " º idade: "));
+	var opniao = parseInt(prompt("Qual a sua opiniao: "));
+	switch(opniao)
+	{
+		case 3:  totOtimo+=idade; otimo++;       break; //otimo
+		case 2:  bom++;                ; break; // bom
+		case 1:  regular++;                    ; break; //regular
+	}
+
+
+}
+var media = totOtimo/otimo;
+document.write("A média das idades de quem respondeu ÓTIMO é: "+ media + "<br>");
+document.write("A quantidade de pessoas que responderam REGULAR foi: "+ regular + "<br>");
+document.write("A porcentagem de pessoas que responderam BOM foi: " +((bom/15)*100) + "%");
+</script>

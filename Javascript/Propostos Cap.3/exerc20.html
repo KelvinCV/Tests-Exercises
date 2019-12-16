@@ -1,0 +1,12 @@
+<meta charset = "UTF-8">
+<script>
+//Faça um programa que receba a medida do ângulo formado por uma escada apoiada no chão e a distância
+//em que a escada está da parede, calcule e mostre a medida da escada para que se possa alcançar sua ponta.
+
+var a = parseFloat(prompt("Digite o ângulo formado pela escada"));// ângulo em graus
+var dist = parseFloat(prompt("Digite a distância da escada em relação a parede"));//cateto adjacente ao ângulo
+var aRad = (a*3.14)/180;
+var med = dist * aRad;
+document.write("A medida da escada até a ponta é: " + med);
+
+</script>

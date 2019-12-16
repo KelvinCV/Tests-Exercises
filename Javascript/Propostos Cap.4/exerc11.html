@@ -1,0 +1,30 @@
+<meta charset = "UTF-8">
+<script>
+//Faça um programa que receba o salário atual de um funcionário e, usando a tabela a seguir, calcule e
+//mostre o valor do aumento e o novo salário
+
+var sal = parseFloat(prompt("Digite o salário"));
+var novoSal;
+var aum;
+
+if (sal <= 300){
+    novoSal = sal + sal * 15/100;
+    aum = novoSal - sal;
+}
+else if (sal > 300 && sal < 600) {
+    novoSal = sal + sal * 10/100;
+    aum = novoSal - sal;
+}
+else if (sal >= 600 && sal <= 900) {
+    novoSal = sal + sal * 5/100;
+    aum = novoSal - sal;
+}
+else if (sal > 900) {
+    novoSal = sal 
+    aum = novoSal - sal;
+}
+
+document.write("Aumento de " + aum + " reais. " + " Novo salário: " + novoSal + " reais");
+
+
+</script>

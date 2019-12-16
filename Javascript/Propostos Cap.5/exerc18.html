@@ -1,0 +1,82 @@
+<meta charset="UTF-8">
+<script>
+//Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário.
+// Faça um programa que calcule e mostre:
+//■■ a média dos salários do grupo;
+//■■ a maior e a menor idade do grupo;
+//■■ a quantidade de mulheres com salário até R$ 200,00;
+//■■ a idade e o sexo da pessoa que possui o menor salário.
+//Finalize a entrada de dados ao ser digitada uma idade negativa.
+
+var somaSalario = 0;
+var totalSalario = 0;
+var idades = [];
+var mulherSalario = 0;
+var salarios = [];
+var sexos = [];
+
+function maiorNum(x) {
+	var maiorNumero = x[0]; 
+	for(j = 1;j < x.length;j++) {
+		if(x[j] > maiorNumero) {
+			maiorNumero = x[j]; 
+		}
+		
+	}
+		return maiorNumero;
+}
+
+function menorNum(x) {
+	var menorNumero = x[0];
+	
+	for(a = x.length; a>1 ;a--) {
+		if(x[a] < menorNumero) {
+			menorNumero = x[a];
+		}
+		
+	}
+		return menorNumero;
+}
+
+for(var i = 1; ; i++) {
+	var idade = parseInt(prompt("Digite a " + i + "º idade: "));
+	if(idade < 0) {
+		break;
+	}
+	idades.push(idade);
+	var sexo = prompt("Qual o sexo? M / F :");
+	sexos.push(sexo);
+	var salario = parseFloat(prompt("Qual o salario: "));
+	salarios.push(salario);
+	totalSalario++;
+	somaSalario+=salario;
+	if(sexo == "F" && salario <= 200) {
+		mulherSalario++;
+	}
+
+}
+function salarioX(x) {
+	var menorSalario = x[0];
+	for(a = x.length; a>1 ;a--) {
+		if(x[a] < menorSalario) {
+			menorSalario = x[a];			
+		}
+	}
+	return menorSalario;
+}
+var idadeX;
+var sexoX;
+for(var i = 0 ; i < salarios.length;i++) {
+	if(salarios[i] == salarioX(salarios)) {
+		idadeX = idades[i];
+		sexoX = sexos[i];
+	}
+}
+var media = somaSalario/totalSalario;
+document.write("Media dos salarios: " + media +"<br>");
+document.write("Maior idade: "+maiorNum(idades) + "<br>");
+document.write("Menor idade: "+menorNum(idades) + "<br>");
+document.write("Quantidade de mulheres com salário até 200 reais: " + mulherSalario + "<br>");
+document.write("Menor salário: "+salarioX(salarios)+" | idade: " + idadeX + " | sexo: " + sexoX);
+
+</script>

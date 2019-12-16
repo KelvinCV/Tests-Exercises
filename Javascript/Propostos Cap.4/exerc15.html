@@ -1,0 +1,18 @@
+<meta charset = "UTF-8">
+<script>
+//Uma agência bancária possui dois tipos de investimentos, conforme o quadro a seguir. Faça um programa
+//que receba o tipo de investimento e seu valor, calcule e mostre o valor corrigido após um mês de
+//investimento, de acordo com o tipo de investimento.
+var inv = prompt("Informe o tipo de investimento. Digite 1 para poupança. Digite 2 para fundos de renda fixa ");
+var val = parseFloat(prompt("Informe o valor do investimento"));
+var poupa = val + val * 3/100;
+var fund = val + val * 4/100;
+
+if (inv == 1){
+    document.write("Valor corrigido de um mês(Poupança): " + poupa + " reais");
+}
+
+if (inv == 2){
+    document.write("Valor corrigido de um mês(Fundos de renda fixa): " + fund + " reais");
+}
+</script>

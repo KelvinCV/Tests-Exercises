@@ -1,0 +1,17 @@
+<meta charset = "UTF-8">
+<script>
+//Faça um programa que receba o raio, calcule e mostre:
+//a) o comprimento de uma esfera; sabe-se que C = 2 * pi R;
+//b) a área de uma esfera; sabe-se que A = pi R²;
+//c) o volume de uma esfera; sabe-se que V = ¾ * pi R³.
+
+var r = parseInt(prompt("Qual o raio?"));
+var pi = 3.14
+var c = 2 * pi * r;
+var a = pi * (r*r);
+var v = (3/4) * pi * (r*r*r); 
+document.write("Comprimento: " + c + "<br>");
+document.write("Área: " + a + "<br>");
+document.write("Volume: " + v);
+
+</script>

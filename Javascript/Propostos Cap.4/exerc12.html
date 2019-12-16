@@ -1,0 +1,34 @@
+<meta charset = "UTF-8">
+<script>
+//Faça um programa que receba o salário bruto de um funcionário e, usando a tabela a seguir, calcule e
+//mostre o valor a receber. Sabe-se que este é composto pelo salário bruto acrescido de gratificação e descontado
+//o imposto de 7% sobre o salário.
+
+var sal = parseFloat(prompt("Digite o salário bruto"));
+var  imp = sal - sal * 93/100;
+var grat;
+var valRecebe;
+
+if (sal <= 350) {
+    grat = 100;
+    valRecebe = sal + grat - imp
+}
+
+if (sal > 350 && sal < 600) {
+    grat = 75;
+    valRecebe = sal + grat - imp
+}
+
+if (sal >= 600 && sal <= 900) {
+    grat = 50;
+    valRecebe = sal + grat - imp
+}
+
+if (sal > 900) {
+    grat = 35;
+    valRecebe = sal + grat - imp
+}
+
+document.write(" Valor a receber: " + valRecebe);
+
+</script>

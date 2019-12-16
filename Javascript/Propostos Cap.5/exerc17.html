@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+// Foi feita uma pesquisa sobre a audiência de canal de TV em várias casas de uma cidade, em determinado
+//dia. Para cada casa consultada foi fornecido o número do canal (4, 5, 7, 12) e o número de pessoas que
+//estavam assistindo àquele canal. Se a televisão estivesse desligada, nada era anotado, ou seja, essa casa
+//não entrava na pesquisa. Faça um programa que:
+//■■ leia um número indeterminado de dados (número do canal e número de pessoas que estavam assistindo); e
+//■■ calcule e mostre a porcentagem de audiência de cada canal.
+// Para encerrar a entrada de dados, digite o número do canal ZERO.
+
+var total = 0;
+var canal4 = 0;
+var canal5 = 0;
+var canal7 = 0;
+var canal12 = 0;
+for(var i = 1; ;i++)
+{
+	var canal = parseInt(prompt("Digite o canal: (4|5|7|12) "));
+	if(canal == 0)
+	{
+		break;
+	}
+	switch(canal)
+	{
+		case 4: canal4++; break;
+		case 5: canal5++; break;
+		case 7: canal7++; break;
+		case 12: canal12++; break;
+	}
+	var num = parseInt(prompt("Quantas pessoas estão assistindo?"));
+	total+=num;
+}
+document.write("Audiência do canal 4: "+((canal4/total)*100)+" % <br>");
+document.write("Audiência do canal 5: "+((canal5/total)*100)+" % <br>");
+document.write("Audiência do canal 7: "+((canal7/total)*100)+" % <br>");
+document.write("Audiência do canal 12: "+((canal12/total)*100)+" %");
+</script>

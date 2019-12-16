@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+//Faça um programa que receba várias idades, calcule e mostre a média das idades digitadas. 
+// Finalize digitando idade igual a zero.
+var soma = 0;
+var total = 0;
+for(var i = 1; ;i++)
+{
+	var idade = parseInt(prompt("Digite a " + i + "º idade:"));
+	if(idade == 0)
+	{
+		break;
+	}
+	soma += idade;
+	total++;
+	
+}
+var media = soma/total;
+document.write("A média das idades é: "+ media);
+</script>
