@@ -1,2 +1,2 @@
 # Tests-Exercises
-Studies related to programming
+Programming study (learning process).
