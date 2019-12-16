@@ -1,2 +1,2 @@
 # Tests-Exercises
-Study related to programming
+Studies related to programming
